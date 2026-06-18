@@ -74,7 +74,7 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
   margin-top:0.5rem;min-height:1.2rem;}
 
 /* ── MENU SCREEN ── */
-#menuScreen{background:var(--bg-void);z-index:90;overflow-y:auto;}
+#menuScreen{background:var(--bg-void);z-index:90;overflow-y:auto;justify-content:flex-start;}
 .menu-bg{position:fixed;inset:0;
   background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);
   background-size:60px 60px;animation:gridDrift 20s linear infinite;z-index:0;}
@@ -208,7 +208,7 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 
 /* ── GAME HUD ── */
 #gameHUD{position:fixed;inset:0;z-index:85;pointer-events:none;}
-.hud-pause-btn{position:absolute;top:0.8rem;left:1rem;pointer-events:auto;z-index:86;
+.hud-pause-btn{display:block;width:100%;margin-top:0.5rem;pointer-events:auto;
   background:rgba(8,11,16,0.85);border:1px solid var(--border);border-radius:var(--radius);
   color:var(--text-secondary);font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.08em;
   padding:0.5rem 0.8rem;transition:all var(--transition);}
@@ -533,7 +533,6 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 
 <!-- GAME HUD -->
 <div id="gameHUD" style="display:none">
-  <button class="hud-pause-btn" onclick="CC.game.pauseToggle()" title="Pause / Menu">☰ MENU</button>
   <div class="hud-top">
     <div class="hud-left">
       <div class="hud-health">
@@ -564,6 +563,7 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
         <div class="hud-weapon">Weapon: <span id="hudWeapon">Rusted Pistol</span></div>
         <div class="hud-weapon" style="margin-top:0.2rem">Kills: <span id="hudKills">0</span></div>
       </div>
+      <button class="hud-pause-btn" onclick="CC.game.pauseToggle()" title="Pause / Menu">☰ MENU</button>
     </div>
   </div>
   <div class="hud-bottom">
