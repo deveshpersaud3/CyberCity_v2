@@ -89,12 +89,12 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 .menu-logo::after{color:var(--crimson);clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitchBot 4s steps(1) infinite;left:2px;opacity:0;}
 @keyframes glitchTop{0%,89%,100%{opacity:0;transform:none;}90%{opacity:1;transform:translateX(-3px);}92%{opacity:1;transform:translateX(3px);}94%{opacity:1;transform:translateX(-1px);}96%{opacity:0;}}
 @keyframes glitchBot{0%,87%,100%{opacity:0;transform:none;}88%{opacity:1;transform:translateX(4px);}91%{opacity:1;transform:translateX(-2px);}93%{opacity:0;}}
-.menu-tagline{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-secondary);letter-spacing:0.2em;margin-top:0.8rem;}
+.menu-tagline{font-family:var(--font-mono);font-size:0.8rem;color:#aaccff;letter-spacing:0.2em;margin-top:0.8rem;}
 .menu-user-bar{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1rem 0;
-  font-family:var(--font-mono);font-size:0.8rem;color:var(--text-secondary);}
+  font-family:var(--font-mono);font-size:0.8rem;color:#ffffff;}
 .menu-user-bar .username{color:var(--cyan);}
 .menu-user-bar .level-badge{background:rgba(0,212,255,0.1);border:1px solid var(--border);
-  padding:0.2rem 0.6rem;border-radius:var(--radius);font-size:0.7rem;}
+  padding:0.2rem 0.6rem;border-radius:var(--radius);font-size:0.7rem;color:#ffffff;}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-bottom:2rem;}
 .menu-btn{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);
   padding:1.5rem 1rem;text-align:center;transition:all var(--transition);position:relative;overflow:hidden;}
@@ -104,17 +104,17 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 .menu-btn .btn-icon{font-size:2rem;display:block;margin-bottom:0.5rem;}
 .menu-btn .btn-label{font-family:var(--font-display);font-weight:800;font-size:1.1rem;text-transform:uppercase;
   letter-spacing:0.08em;display:block;margin-bottom:0.2rem;}
-.menu-btn .btn-sub{font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;}
+.menu-btn .btn-sub{font-family:var(--font-mono);font-size:0.65rem;color:#aaccff;letter-spacing:0.1em;}
 .menu-btn.play-btn{border-color:var(--cyan);background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(0,212,255,0.02));}
 .menu-btn.play-btn .btn-label{color:var(--cyan);}
 .menu-stats-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;}
 .menu-stat{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
   padding:0.8rem 1.2rem;text-align:center;min-width:100px;}
 .menu-stat .s-num{font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--cyan);}
-.menu-stat .s-lbl{font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;}
+.menu-stat .s-lbl{font-family:var(--font-mono);font-size:0.65rem;color:#aaccff;letter-spacing:0.1em;}
 .xp-bar-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
   padding:0.8rem 1.2rem;margin-bottom:1rem;}
-.xp-bar-label{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-secondary);
+.xp-bar-label{font-family:var(--font-mono);font-size:0.7rem;color:#ffffff;
   display:flex;justify-content:space-between;margin-bottom:0.4rem;}
 .xp-bar-bg{height:6px;background:var(--bg-raised);border-radius:3px;overflow:hidden;}
 .xp-bar-fill{height:100%;background:linear-gradient(90deg,var(--cyan),#00ffaa);border-radius:3px;transition:width 0.8s ease;}
@@ -204,7 +204,7 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 
 /* ── GAME SCREEN ── */
 #gameScreen{background:#000;z-index:80;overflow:hidden;}
-#gameCanvas{display:block;width:100%;height:100%;}
+#gameCanvas{display:block;width:100%;height:100%;cursor:crosshair;}
 
 /* ── GAME HUD ── */
 #gameHUD{position:fixed;inset:0;z-index:85;pointer-events:none;}
@@ -215,12 +215,12 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
   padding:0.6rem 0.8rem;min-width:180px;backdrop-filter:blur(8px);}
 .hud-player-name{font-family:var(--font-mono);font-size:0.65rem;color:var(--cyan);letter-spacing:0.15em;margin-bottom:0.3rem;}
 .health-bar-wrap,.xp-bar-small{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem;}
-.bar-label{font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);width:20px;flex-shrink:0;}
+.bar-label{font-family:var(--font-mono);font-size:0.6rem;color:var(--cyan);width:20px;flex-shrink:0;}
 .bar-bg{flex:1;height:8px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;}
 .bar-fill{height:100%;border-radius:4px;transition:width 0.3s ease;}
 .hp-fill{background:linear-gradient(90deg,var(--crimson),#ff6b6b);}
 .xp-fill{background:linear-gradient(90deg,var(--cyan),#00ffaa);}
-.bar-val{font-family:var(--font-mono);font-size:0.6rem;color:var(--text-secondary);width:50px;text-align:right;flex-shrink:0;}
+.bar-val{font-family:var(--font-mono);font-size:0.6rem;color:#ffffff;width:50px;text-align:right;flex-shrink:0;}
 .hud-lives{display:flex;gap:0.3rem;align-items:center;margin-top:0.2rem;}
 .life-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 6px var(--cyan);}
 .life-dot.lost{background:var(--text-muted);box-shadow:none;}
@@ -228,21 +228,21 @@ a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;
 .hud-center{position:absolute;top:0.8rem;left:50%;transform:translateX(-50%);}
 .hud-level-info{background:rgba(8,11,16,0.85);border:1px solid var(--border);border-radius:var(--radius);
   padding:0.4rem 1rem;text-align:center;backdrop-filter:blur(8px);}
-.level-label{font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);letter-spacing:0.15em;}
+.level-label{font-family:var(--font-mono);font-size:0.65rem;color:#ffffff;letter-spacing:0.15em;}
 .level-num{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--cyan);line-height:1;}
-.zone-label{font-family:var(--font-mono);font-size:0.6rem;color:var(--amber);letter-spacing:0.1em;}
+.zone-label{font-family:var(--font-mono);font-size:0.6rem;color:var(--cyan);letter-spacing:0.1em;}
 
 .hud-right-panel{background:rgba(8,11,16,0.85);border:1px solid var(--border);border-radius:var(--radius);
   padding:0.6rem 0.8rem;backdrop-filter:blur(8px);min-width:140px;}
 .hud-coins{font-family:var(--font-mono);font-size:0.8rem;color:var(--gold);display:flex;align-items:center;gap:0.3rem;margin-bottom:0.3rem;}
-.hud-weapon{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-secondary);}
-.hud-weapon span{color:var(--text-primary);}
+.hud-weapon{font-family:var(--font-mono);font-size:0.7rem;color:#aaccff;}
+.hud-weapon span{color:#ffffff;}
 
 .hud-bottom{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;
   align-items:flex-end;padding:0.8rem;}
-.hud-controls-hint{font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);letter-spacing:0.05em;
+.hud-controls-hint{font-family:var(--font-mono);font-size:0.6rem;color:#aaccff;letter-spacing:0.05em;
   background:rgba(8,11,16,0.7);padding:0.4rem 0.6rem;border-radius:var(--radius);}
-.hud-controls-hint span{color:var(--text-secondary);}
+.hud-controls-hint span{color:var(--cyan);}
 
 .hud-ability-bar{display:flex;gap:0.4rem;align-items:center;}
 .ability-slot{width:40px;height:40px;background:rgba(8,11,16,0.85);border:1px solid var(--border);
@@ -1252,9 +1252,7 @@ const achievements = {
   check(id, value) {
     const def = ACHIEVEMENTS_DB.find(a=>a.id===id);
     if(!def || state.player.achievements[id]) return;
-    // Update stat
-    if(!state.player.stats) state.player.stats = {};
-    state.player.stats[id] = Math.max(state.player.stats[id]||0, value);
+    // For direct-value achievements just check if value meets target
     if(value >= def.target) {
       state.player.achievements[id] = true;
       state.player.coins += def.reward.coins;
@@ -1264,7 +1262,18 @@ const achievements = {
       ui.refreshMenu();
     }
   },
-  checkLevel(lvl) { this.check('first_blood',lvl); this.check('rookie',lvl); this.check('zone1',lvl); this.check('zone2',lvl); this.check('zone3',lvl); this.check('humanity',lvl); },
+  checkLevel(lvl) {
+    // Track game level achievements by directly checking level reached
+    const p = state.player;
+    if(!p.stats) p.stats={dodges:0,heals:0,bosses:0,zone:0,coins:0};
+    if(!p.stats.levelReached || lvl > p.stats.levelReached) p.stats.levelReached = lvl;
+    if(lvl>=1)  achievements.check('first_blood',1);
+    if(lvl>=5)  achievements.check('rookie',5);
+    if(lvl>=8)  achievements.check('zone1',8);
+    if(lvl>=16) achievements.check('zone2',16);
+    if(lvl>=25) achievements.check('zone3',25);
+    if(lvl>=25) achievements.check('humanity',25);
+  },
   checkKills(total) { this.check('kill100',total); this.check('kill500',total); },
   checkCoins(total) { this.check('coins1k',total); this.check('coins5k',total); },
   checkPlayerLevel(pl) { this.check('levelup5',pl); this.check('levelup10',pl); },
@@ -1401,11 +1410,33 @@ const game = {
     };
 
     if(!isBoss) this.spawnInitialEnemies(diffMult);
+
+    // Safety: push player out of any wall they might have spawned inside
+    const p = this.gs.player;
+    let safeX = p.x, safeY = p.y;
+    if(this.isSolid(Math.floor(p.x/TILE), Math.floor(p.y/TILE))) {
+      // Scan for nearest open tile in the spawn region
+      outer: for(let r=1; r<MAP_W; r++) {
+        for(let tx=2; tx<6; tx++) {
+          for(let ty=4; ty<12; ty++) {
+            if(!this.isSolid(tx,ty)) { safeX=tx*TILE+TILE/2; safeY=ty*TILE+TILE/2; break outer; }
+          }
+        }
+      }
+      p.x = safeX; p.y = safeY;
+    }
+
     ui.showScreen('game');
     document.getElementById('gameHUD').style.display='';
     this.updateHUD();
-    if(isBoss) { document.getElementById('bossHUD').classList.add('visible'); }
-    else { document.getElementById('bossHUD').classList.remove('visible'); }
+    if(isBoss) {
+      document.getElementById('bossHUD').classList.add('visible');
+      document.getElementById('bossNameHUD').textContent = bossData.name;
+      document.getElementById('bossHpFill').style.width='100%';
+      document.getElementById('bossPhaseLabel').textContent='PHASE 1';
+    } else {
+      document.getElementById('bossHUD').classList.remove('visible');
+    }
     ui.toast(`Level ${lvl} — ${ZONES[zone].name}`,'');
     if(lvl%5===1 && lvl>1) ui.showCheckpoint();
     if(this.raf) cancelAnimationFrame(this.raf);
@@ -1423,18 +1454,31 @@ const game = {
         else map[y][x]=0;
       }
     }
-    // Add some walls
     if(!isBoss) {
-      for(let i=0;i<20;i++) {
-        const wx=Math.floor(Math.random()*(MAP_W-4))+2;
+      // Keep attempts low to avoid over-filling the map
+      let placed = 0;
+      for(let i=0;i<30&&placed<12;i++) {
+        const wx=Math.floor(Math.random()*(MAP_W-6))+3;
         const wy=Math.floor(Math.random()*(MAP_H-4))+2;
-        if(wx<4||wx>MAP_W-4||wy<3||wy>MAP_H-3) continue;
-        const len=Math.floor(Math.random()*4)+1;
+        const len=Math.floor(Math.random()*3)+1;
         const horiz=Math.random()>0.5;
+        // Skip if this wall would be in the player spawn zone (left side, mid rows)
+        // Player spawns at tile (2,7) — protect cols 1-4, rows 5-10
+        const nearSpawn = wx<=4 && wy>=5 && wy<=10;
+        // Protect exit zone: right side cols 16-19, rows 5-10
+        const nearExit = wx>=16 && wy>=5 && wy<=10;
+        if(nearSpawn||nearExit) continue;
+        let ok=true;
         for(let j=0;j<len;j++) {
           const tx=horiz?wx+j:wx, ty=horiz?wy:wy+j;
-          if(tx>1&&tx<MAP_W-2&&ty>1&&ty<MAP_H-2) map[ty][tx]=1;
+          if(tx<2||tx>MAP_W-3||ty<2||ty>MAP_H-3) { ok=false; break; }
         }
+        if(!ok) continue;
+        for(let j=0;j<len;j++) {
+          const tx=horiz?wx+j:wx, ty=horiz?wy:wy+j;
+          map[ty][tx]=1;
+        }
+        placed++;
       }
     }
     return map;
@@ -1624,16 +1668,23 @@ const game = {
   },
 
   moveEntity(e, dx, dy) {
-    const nx=e.x+dx, ny=e.y+dy;
-    const hw=e.w/2, hh=e.h/2;
-    const tl=this.isSolid(Math.floor((nx-hw)/TILE),Math.floor((ny-hh)/TILE));
-    const tr=this.isSolid(Math.floor((nx+hw)/TILE),Math.floor((ny-hh)/TILE));
-    const bl=this.isSolid(Math.floor((nx-hw)/TILE),Math.floor((ny+hh)/TILE));
-    const br=this.isSolid(Math.floor((nx+hw)/TILE),Math.floor((ny+hh)/TILE));
-    if(!tl&&!tr&&!bl&&!br){e.x=nx;e.y=ny;}
-    else if(!tl&&!bl&&(tr||br)){e.x=nx;}
-    else if(!tr&&!br&&(tl||bl)){e.x=nx;}
-    else{e.y=ny;}
+    const hw = e.w/2 - 1, hh = e.h/2 - 1;
+    // Resolve X axis independently
+    const nx = e.x + dx;
+    const xBlocked =
+      this.isSolid(Math.floor((nx-hw)/TILE), Math.floor((e.y-hh)/TILE)) ||
+      this.isSolid(Math.floor((nx+hw)/TILE), Math.floor((e.y-hh)/TILE)) ||
+      this.isSolid(Math.floor((nx-hw)/TILE), Math.floor((e.y+hh)/TILE)) ||
+      this.isSolid(Math.floor((nx+hw)/TILE), Math.floor((e.y+hh)/TILE));
+    if (!xBlocked) e.x = nx;
+    // Resolve Y axis independently
+    const ny = e.y + dy;
+    const yBlocked =
+      this.isSolid(Math.floor((e.x-hw)/TILE), Math.floor((ny-hh)/TILE)) ||
+      this.isSolid(Math.floor((e.x+hw)/TILE), Math.floor((ny-hh)/TILE)) ||
+      this.isSolid(Math.floor((e.x-hw)/TILE), Math.floor((ny+hh)/TILE)) ||
+      this.isSolid(Math.floor((e.x+hw)/TILE), Math.floor((ny+hh)/TILE));
+    if (!yBlocked) e.y = ny;
   },
 
   updateEnemy(e,dt,p) {
@@ -1753,9 +1804,15 @@ const game = {
       if(gs.boss&&gs.boss.alive&&Math.hypot(gs.boss.x-p.x,gs.boss.y-p.y)<range+20) this.hitBoss(dmg);
       this.spawnParticles(p.x+p.facing*30,p.y,'#00d4ff',6);
     } else {
-      // Ranged projectile
-      const dx=this.mouseX-p.x*this.scaleX; const dy=this.mouseY-p.y*this.scaleY;
-      const ang=Math.atan2(dy/this.scaleY,dx/this.scaleX);
+      // Ranged projectile — convert mouse screen coords to world coords via camera
+      const cam = gs.camera;
+      const worldMouseX = (this.mouseX / this.scaleX) + cam.x;
+      const worldMouseY = (this.mouseY / this.scaleY) + cam.y;
+      const dx = worldMouseX - p.x;
+      const dy = worldMouseY - p.y;
+      const ang = Math.atan2(dy, dx);
+      // Update facing based on aim direction
+      if(dx !== 0) p.facing = dx > 0 ? 1 : -1;
       const spd=w.speed+100;
       this.projectiles.push({x:p.x,y:p.y,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,
         dmg,life:w.range/spd,fromPlayer:true,col:'#00d4ff',r:4});
@@ -1777,10 +1834,14 @@ const game = {
       achievements.checkKills(state.player.totalKills);
       this.spawnDrop(e.x,e.y);
       this.spawnParticles(e.x,e.y,'#ff2b4e',15);
-      // Check if all enemies dead
-      if(this.enemies.filter(x=>x.alive).length===0&&!this.gs.isBoss) {
-        this.gs.exitOpen=true;
-        ui.toast('Area cleared! Reach the exit →','win');
+      // Check if all enemies dead — works for both normal and boss levels
+      const aliveCount = this.enemies.filter(x=>x.alive).length;
+      if(aliveCount===0 && !this.gs.exitOpen) {
+        if(!this.gs.isBoss) {
+          this.gs.exitOpen=true;
+          ui.toast('Area cleared! Reach the exit →','win');
+        }
+        // On boss levels, exit opens when boss is killed (handled in hitBoss)
       }
       document.getElementById('hudKills').textContent=state.run.kills;
     }
@@ -1804,7 +1865,9 @@ const game = {
       if(aids[idx-1]) achievements.check(aids[idx-1],1);
       document.getElementById('bossHUD').classList.remove('visible');
       gs.exitOpen=true;
-      ui.toast('BOSS DEFEATED! '+(gs.lvl===25?'THE OVERLORD IS GONE!':'Proceed to next zone'),'win',5000);
+      // Kill any remaining minions spawned during boss fight
+      this.enemies.forEach(e=>{ e.alive=false; });
+      ui.toast('BOSS DEFEATED! '+(gs.lvl===25?'THE OVERLORD IS GONE! — Reach the exit!':'Reach the exit to advance!'),'win',5000);
     }
   },
 
@@ -1959,7 +2022,8 @@ const game = {
 
     const items=['⬡ '+total+' Coins','+'+xpGain+' XP'];
     if(newWeapon) items.push('🎁 New weapon: '+newWeapon.name);
-    ui.showReward('LEVEL '+lvl+' COMPLETE!', items, ()=>this.loadLevel(lvl+1));
+    const nextLvl = lvl + 1;
+    ui.showReward('LEVEL '+lvl+' COMPLETE!', items, ()=>{ game.loadLevel(nextLvl); });
   },
 
   afterReward() { /* handled by ui */ },
@@ -2202,7 +2266,7 @@ const game = {
       ctx.fillStyle=bd.color;
       ctx.font='bold 11px monospace';
       ctx.textAlign='center';
-      ctx.fillText(bd.name,-b.h/2-5);
+      ctx.fillText(bd.name, 0, -b.h/2-10);
       ctx.restore();
     }
 
@@ -2238,6 +2302,29 @@ const game = {
     ctx.restore();
 
     ctx.restore(); // end camera translate
+
+    // Draw crosshair at mouse position (world coords)
+    if(gs) {
+      const cam=gs.camera;
+      const crossX = (this.mouseX / this.scaleX);
+      const crossY = (this.mouseY / this.scaleY);
+      const cs=8, ct=2;
+      ctx.save();
+      ctx.strokeStyle='rgba(0,212,255,0.9)';
+      ctx.lineWidth=1.5;
+      ctx.shadowColor='#00d4ff';
+      ctx.shadowBlur=6;
+      // Horizontal line
+      ctx.beginPath(); ctx.moveTo(crossX-cs,crossY); ctx.lineTo(crossX-ct,crossY); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(crossX+ct,crossY); ctx.lineTo(crossX+cs,crossY); ctx.stroke();
+      // Vertical line
+      ctx.beginPath(); ctx.moveTo(crossX,crossY-cs); ctx.lineTo(crossX,crossY-ct); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(crossX,crossY+ct); ctx.lineTo(crossX,crossY+cs); ctx.stroke();
+      // Center dot
+      ctx.fillStyle='rgba(0,212,255,0.9)';
+      ctx.beginPath(); ctx.arc(crossX,crossY,1.5,0,Math.PI*2); ctx.fill();
+      ctx.restore();
+    }
 
     // Minimap
     this.drawMinimap();
